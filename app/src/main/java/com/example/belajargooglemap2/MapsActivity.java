@@ -66,10 +66,11 @@ GoogleApiClient.OnConnectionFailedListener,
             case R.id.search_address:
                 EditText inputAlamat = findViewById(R.id.location_search);
                 String alamat = inputAlamat.getText().toString();
+                String nama = inputAlamat.getText().toString();
                 List<Address> listAlamat = null;
                 MarkerOptions userMarkerOptions = new MarkerOptions();
 
-                if (!TextUtils.isEmpty(alamat)){
+                if (!TextUtils.isEmpty(alamat) && !TextUtils.isEmpty(nama)){
                     Geocoder geocoder = new Geocoder(this);
                     try{
                         listAlamat = geocoder.getFromLocationName(alamat,6);
