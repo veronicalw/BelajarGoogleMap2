@@ -70,7 +70,7 @@ GoogleApiClient.OnConnectionFailedListener,
                 List<Address> listAlamat = null;
                 MarkerOptions userMarkerOptions = new MarkerOptions();
 
-                if (!TextUtils.isEmpty(alamat)){
+                if (!TextUtils.isEmpty(alamat) && !TextUtils.isEmpty(nama)){
                     Geocoder geocoder = new Geocoder(this);
                     try{
                         listAlamat = geocoder.getFromLocationName(alamat,6);
