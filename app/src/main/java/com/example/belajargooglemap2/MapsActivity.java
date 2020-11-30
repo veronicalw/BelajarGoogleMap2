@@ -66,6 +66,7 @@ GoogleApiClient.OnConnectionFailedListener,
             case R.id.search_address:
                 EditText inputAlamat = findViewById(R.id.location_search);
                 String alamat = inputAlamat.getText().toString();
+                String nama = inputAlamat.getText().toString();
                 List<Address> listAlamat = null;
                 MarkerOptions userMarkerOptions = new MarkerOptions();
 
